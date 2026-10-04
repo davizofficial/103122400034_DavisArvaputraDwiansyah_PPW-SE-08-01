@@ -1,0 +1,203 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f5f5f5;
+	padding: 30px 20px;
+}
+
+/* Container */
+header, section, footer {
+	max-width: 850px;
+	margin: 0 auto 25px auto;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 4px;
+}
+
+/* Header / Profile */
+header {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #333;
+}
+
+header img.gambar-saya {
+	width: 100px;
+	height: 100px;
+	border-radius: 4px;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+header h1.nama-saya {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #222;
+}
+
+header p {
+	font-size: 13px;
+	margin: 3px 0;
+	color: #666;
+}
+
+header p:first-of-type {
+	font-size: 14px;
+	font-weight: 500;
+	color: #333;
+	margin-bottom: 8px;
+}
+
+/* Sections */
+section {
+	margin-bottom: 20px;
+}
+
+section h2 {
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	color: #222;
+}
+
+/* Articles */
+article {
+	margin-bottom: 18px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+article:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+article h3 {
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 4px;
+	color: #222;
+}
+
+article p {
+	font-size: 13px;
+	margin: 3px 0;
+	color: #666;
+	line-height: 1.5;
+}
+
+article p:nth-of-type(2) {
+	font-weight: 500;
+	color: #333;
+}
+
+article p:nth-of-type(3) {
+	font-size: 12px;
+	color: #999;
+	margin-bottom: 8px;
+}
+
+/* Lists */
+ul {
+	margin: 10px 0;
+	margin-left: 20px;
+	list-style: disc;
+}
+
+li {
+	font-size: 13px;
+	margin-bottom: 6px;
+	color: #666;
+	line-height: 1.5;
+}
+
+/* Footer */
+footer {
+	text-align: center;
+	border-top: 1px solid #ddd;
+	padding: 20px 30px;
+}
+
+footer p {
+	font-size: 12px;
+	color: #888;
+	margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	body {
+		padding: 20px 15px;
+	}
+
+	header, section, footer {
+		padding: 20px;
+		margin-bottom: 15px;
+	}
+
+	header {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+
+	header h1.nama-saya {
+		font-size: 24px;
+	}
+
+	section h2 {
+		font-size: 15px;
+	}
+
+	article h3 {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		padding: 15px 10px;
+	}
+
+	header, section, footer {
+		padding: 15px;
+		margin-bottom: 12px;
+	}
+
+	header img.gambar-saya {
+		width: 80px;
+		height: 80px;
+	}
+
+	header h1.nama-saya {
+		font-size: 20px;
+	}
+
+	header p {
+		font-size: 12px;
+	}
+
+	section h2 {
+		font-size: 14px;
+	}
+
+	article h3 {
+		font-size: 13px;
+	}
+
+	li {
+		font-size: 12px;
+	}
+}
