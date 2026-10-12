@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Puskesmas Sehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #059669;
+            --dark: #047857;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar-custom {
+            background-color: var(--dark);
+        }
+
+        .navbar-custom .nav-link {
+            color: white !important;
+            transition: 0.3s;
+        }
+
+        .navbar-custom .nav-link:hover {
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 40px 0;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .service-detail {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .service-detail:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail h3 {
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-detail i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">
+                <i class="fas fa-hospital"></i> Puskesmas Sehat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pendaftaran.html">Pendaftaran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Layanan Kesehatan</h1>
+            <p class="text-light">Kami menyediakan berbagai layanan kesehatan berkualitas tinggi</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <section>
+          <h2 class="section-title">Daftar Layanan Kami</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-detail">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Pemeriksaan Umum</h3>
+                        <p>Pemeriksaan kesehatan menyeluruh dengan dokter berpengalaman. Termasuk pengecekan tekanan darah, berat badan, dan riwayat kesehatan lengkap untuk deteksi dini penyakit.</p>
+                    </div>
+
+                    <div class="service-detail">
+                        <i class="fas fa-syringe"></i>
+                        <h3>Imunisasi</h3>
+                        <p>Program imunisasi lengkap untuk semua usia sesuai jadwal kesehatan nasional. Kami menyediakan vaksin berkualitas dengan pelayanan yang aman dan nyaman.</p>
+                    </div>
+
+                    <div class="service-detail">
+                        <i class="fas fa-baby"></i>
+                        <h3>Kesehatan Ibu & Anak</h3>
+                        <p>Layanan antenatal, postnatal, dan kesehatan anak dengan pendampingan profesional. Termasuk konseling kesehatan dan pemeriksaan berkala.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-detail">
+                        <i class="fas fa-flask"></i>
+                        <h3>Laboratorium</h3>
+                        <p>Tes laboratorium lengkap dengan peralatan modern dan hasil yang akurat. Kami menawarkan berbagai pemeriksaan darah, urin, dan tes khusus lainnya.</p>
+                    </div>
+
+                    <div class="service-detail">
+                        <i class="fas fa-prescription-bottle"></i>
+                        <h3>Farmasi</h3>
+                        <p>Layanan farmasi dengan obat-obatan berkualitas tinggi. Kami menyediakan konsultasi apotek dan edukasi penggunaan obat yang tepat.</p>
+                    </div>
+
+                    <div class="service-detail">
+                        <i class="fas fa-tooth"></i>
+                        <h3>Gigi & Mulut</h3>
+                        <p>Layanan kesehatan gigi dan mulut dengan teknologi terkini. Meliputi pembersihan gigi, penambalan, dan perawatan kesehatan gigi lainnya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="mt-5 p-4" style="background-color: #f0fdf4; border-radius: 8px; border-left: 5px solid var(--primary);">
+            <h3 style="color: var(--primary); font-weight: 600;">Informasi Penting</h3>
+            <p class="text-muted mt-3">Semua layanan kami dilengkapi dengan tenaga medis profesional dan bersertifikat. Kami juga menerima berbagai asuransi kesehatan untuk memudahkan akses layanan kesehatan Anda.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

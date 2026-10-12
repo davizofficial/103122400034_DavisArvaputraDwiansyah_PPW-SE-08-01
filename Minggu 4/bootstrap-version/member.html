@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member - Puskesmas Sehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #059669;
+            --dark: #047857;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar-custom {
+            background-color: var(--dark);
+        }
+        
+        .navbar-custom .nav-link {
+            color: white !important;
+            transition: 0.3s;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        
+        .benefit-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card h5 {
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">
+                <i class="fas fa-hospital"></i> Puskesmas Sehat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pendaftaran.html">Pendaftaran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Program Member</h1>
+            <p class="text-light">Nikmati berbagai keuntungan eksklusif sebagai member kami</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <section class="mb-5">
+            <h2 class="section-title">Mengapa Menjadi Member?</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-percentage"></i>
+                        <h5>Diskon Khusus</h5>
+                        <p class="text-muted small">Dapatkan diskon hingga 20% untuk semua layanan kesehatan</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-hourglass-half"></i>
+                        <h5>Prioritas Antrian</h5>
+                        <p class="text-muted small">Akses cepat dan prioritas dalam pemeriksaan kesehatan</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-gift"></i>
+                        <h5>Bonus Poin</h5>
+                        <p class="text-muted small">Kumpulkan poin setiap kunjungan untuk hadiah menarik</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-check-double"></i>
+                        <h5>Konsultasi Gratis</h5>
+                        <p class="text-muted small">Konsultasi kesehatan gratis dengan dokter spesialis</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-bell"></i>
+                        <h5>Notifikasi Kesehatan</h5>
+                        <p class="text-muted small">Pengingat check-up rutin dan tips kesehatan eksklusif</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-crown"></i>
+                        <h5>Status Premium</h5>
+                        <p class="text-muted small">Akses ke layanan premium dengan fasilitas terbaik</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Types -->
+        <section class="mb-5">
+            <h2 class="section-title">Paket Keanggotaan</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card" style="border: 2px solid var(--primary);">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--dark);">Silver</h5>
+                            <p class="card-text text-muted">Paket dasar untuk keluarga</p>
+                            <h4 style="color: var(--primary); font-weight: 700;">Rp 500.000/tahun</h4>
+                            <ul class="text-muted small mt-3" style="list-style: none; padding: 0;">
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Diskon 10%</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Prioritas antrian</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Bonus poin</li>
+                            </ul>
+                            <button class="btn btn-outline-success w-100 mt-3">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card" style="border: 2px solid var(--primary); transform: scale(1.05);">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">PALING POPULER</span>
+                            <h5 class="card-title" style="color: var(--dark);">Gold</h5>
+                            <p class="card-text text-muted">Paket lengkap untuk perseorangan</p>
+                            <h4 style="color: var(--primary); font-weight: 700;">Rp 1.000.000/tahun</h4>
+                            <ul class="text-muted small mt-3" style="list-style: none; padding: 0;">
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Diskon 15%</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Prioritas antrian</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Konsultasi gratis</li>
+                            </ul>
+                            <button class="btn btn-success w-100 mt-3">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card" style="border: 2px solid var(--primary);">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--dark);">Platinum</h5>
+                            <p class="card-text text-muted">Paket premium eksklusif</p>
+                            <h4 style="color: var(--primary); font-weight: 700;">Rp 2.000.000/tahun</h4>
+                            <ul class="text-muted small mt-3" style="list-style: none; padding: 0;">
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Diskon 20%</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Status premium</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i> Layanan 24/7</li>
+                            </ul>
+                            <button class="btn btn-outline-success w-100 mt-3">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Puskesmas Sehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #059669;
+            --dark: #047857;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar-custom {
+            background-color: var(--dark);
+        }
+        
+        .navbar-custom .nav-link {
+            color: white !important;
+            transition: 0.3s;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .gallery-item {
+            background: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item i {
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">
+                <i class="fas fa-hospital"></i> Puskesmas Sehat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dokter.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pendaftaran.html">Pendaftaran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Galeri</h1>
+            <p class="text-light">Lihat fasilitas dan kegiatan Puskesmas Sehat</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <section>
+            <h2 class="section-title">Fasilitas Kami</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Ruang Pemeriksaan Umum</strong></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <i class="fas fa-flask-vial"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Ruang Laboratorium</strong></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Ruang Gigi</strong></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Apotek</strong></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Ruang Istirahat</strong></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="gallery-item">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Ruang Konsultasi</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="mt-5">
+            <h2 class="section-title">Kegiatan Kami</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Penyuluhan Kesehatan</strong></p>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Program Vaksinasi</strong></p>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Donor Darah</strong></p>
+                </div>
+                <div class="col-md-6">
+                    <div class="gallery-item">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <p class="text-center mt-3 text-muted"><strong>Senam Kesehatan</strong></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

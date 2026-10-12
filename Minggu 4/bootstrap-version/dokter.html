@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Dokter - Puskesmas Sehat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #059669;
+            --dark: #047857;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar-custom {
+            background-color: var(--dark);
+        }
+        
+        .navbar-custom .nav-link {
+            color: white !important;
+            transition: 0.3s;
+        }
+        
+        .navbar-custom .nav-link:hover {
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .doctor-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        
+        .doctor-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .doctor-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary), #10b981);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .doctor-card h4 {
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">
+                <i class="fas fa-hospital"></i> Puskesmas Sehat
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="layanan.html">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dokter.html">Dokter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pendaftaran.html">Pendaftaran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Tim Dokter Kami</h1>
+            <p class="text-light">Dokter berpengalaman dan bersertifikat siap melayani Anda</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <section>
+            <h2 class="section-title">Dokter Spesialis</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Budi Santoso</h4>
+                        <p class="doctor-specialty">Dokter Umum</p>
+                        <p class="text-muted small">Pengalaman 10 tahun, Spesialis Kesehatan Umum</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Siti Nurhaliza</h4>
+                        <p class="doctor-specialty">Dokter Anak</p>
+                        <p class="text-muted small">Pengalaman 8 tahun, Spesialis Kesehatan Anak</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Ahmad Wijaya</h4>
+                        <p class="doctor-specialty">Dokter Gigi</p>
+                        <p class="text-muted small">Pengalaman 7 tahun, Spesialis Kesehatan Gigi</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Rini Wulandari</h4>
+                        <p class="doctor-specialty">Dokter Kandungan</p>
+                        <p class="text-muted small">Pengalaman 9 tahun, Spesialis Obstetri</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Hendra Gunawan</h4>
+                        <p class="doctor-specialty">Dokter Penyakit</p>
+                        <p class="text-muted small">Pengalaman 12 tahun, Spesialis Penyakit Dalam</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="doctor-card">
+                        <div class="doctor-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Eka Putri</h4>
+                        <p class="doctor-specialty">Perawat Profesional</p>
+                        <p class="text-muted small">Pengalaman 6 tahun, Perawat Bersertifikat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="mt-5 p-4" style="background-color: #f0fdf4; border-radius: 8px; border-left: 5px solid var(--primary);">
+            <h3 style="color: var(--primary); font-weight: 600;">Jadwal Praktik</h3>
+            <p class="text-muted mt-3">Semua dokter kami melayani dengan jam praktik yang fleksibel. Silahkan hubungi kami untuk mengatur jadwal konsultasi dengan dokter pilihan Anda.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
