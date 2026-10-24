@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Puskesmas Sehat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-emerald-800 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white font-bold text-lg flex items-center">
+                    <i class="fas fa-hospital mr-2"></i> Puskesmas Sehat
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="text-white md:hidden text-2xl focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-6">
+                    <a href="index.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Beranda</a>
+                    <a href="layanan.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Layanan</a>
+                    <a href="dokter.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Dokter</a>
+                    <a href="pendaftaran.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Pendaftaran</a>
+                    <a href="kontak.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Kontak</a>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-emerald-700 mt-3 flex flex-col gap-2">
+                <a href="index.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Beranda</a>
+                <a href="layanan.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Layanan</a>
+                <a href="dokter.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Dokter</a>
+                <a href="pendaftaran.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Pendaftaran</a>
+                <a href="kontak.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Kontak</a>
+                <a href="galeri.html" class="text-white bg-emerald-700 px-4 py-2 rounded transition">Galeri</a>
+                <a href="tentang-kami.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Tentang Kami</a>
+                <a href="member.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Member</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Galeri</h1>
+            <p class="text-xl text-emerald-100">Lihat fasilitas dan kegiatan Puskesmas Sehat</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+        <!-- Fasilitas -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-emerald-700 mb-4">Fasilitas Kami</h2>
+            <p class="text-gray-600 mb-12">Klik pada setiap fasilitas untuk melihat detail informasi.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Dilengkapi alat diagnosis modern dan tempat tidur periksa higienis untuk kenyamanan pemeriksaan umum Anda.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-hospital text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Ruang Pemeriksaan Umum</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Laboratorium pengujian sampel darah, urin, dan tes cepat dengan akurasi terpercaya dan sertifikasi standar.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-flask-vial text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Ruang Laboratorium</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Unit dental dengan kursi gigi canggih, sterilisasi instrumen autoclave, dan tenaga dokter gigi terlatih.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-tooth text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Ruang Gigi</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Apotek resmi menyediakan obat-obatan lengkap dan layanan konseling obat gratis bersama apoteker.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-pills text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Apotek</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Ruangan observasi yang tenang, ber-AC, dan nyaman bagi pasien yang membutuhkan istirahat sementara.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-bed text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Ruang Istirahat</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Ruang privat untuk konsultasi kesehatan mendalam dan konseling gizi bersama dokter spesialis.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-stethoscope text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Ruang Konsultasi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kegiatan -->
+        <section>
+            <h2 class="text-4xl font-bold text-emerald-700 mb-4">Kegiatan Kami</h2>
+            <p class="text-gray-600 mb-12">Berbagai kegiatan bakti dan pemberdayaan kesehatan masyarakat.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Edukasi pola hidup bersih dan sehat (PHBS) secara berkala di lingkungan RT/RW dan sekolah.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-users text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Penyuluhan Kesehatan</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Pemberian vaksin imunisasi dasar dan vaksinasi tahunan bagi balita, anak, dan lansia.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-heartbeat text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Program Vaksinasi</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Bakti sosial donor darah rutin bekerjasama dengan PMI untuk membantu sesama yang membutuhkan.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-heart text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Donor Darah</p>
+                </div>
+
+                <div class="kartu-galeri group cursor-pointer" data-deskripsi="Kegiatan senam bugar dan peregangan setiap Sabtu pagi terbuka untuk seluruh warga sekitar.">
+                    <div class="bg-gray-200 group-hover:bg-emerald-50 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition duration-300">
+                        <span class="ikon-galeri"><i class="fas fa-dumbbell text-emerald-600 text-5xl"></i></span>
+                    </div>
+                    <p class="judul-galeri text-center text-gray-700 font-semibold mt-4 group-hover:text-emerald-700 transition">Senam Kesehatan</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white text-center py-8 border-t-4 border-emerald-600 mt-16">
+        <div class="container mx-auto px-4">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom JavaScript & jQuery -->
+    <script src="js/script.js"></script>
+</body>
+</html>
