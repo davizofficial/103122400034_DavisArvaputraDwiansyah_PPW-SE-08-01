@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Puskesmas Sehat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-emerald-800 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white font-bold text-lg flex items-center">
+                    <i class="fas fa-hospital mr-2"></i> Puskesmas Sehat
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white hover:text-emerald-200 focus:outline-none p-2 rounded-lg hover:bg-emerald-700 transition" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-6 items-center">
+                    <a href="index.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Beranda</a>
+                    <a href="layanan.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Layanan</a>
+                    <a href="dokter.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Dokter</a>
+                    <a href="pendaftaran.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Pendaftaran</a>
+                    <a href="kontak.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Kontak</a>
+                    <a href="galeri.html" class="text-white bg-emerald-700 px-3 py-2 rounded transition font-semibold">Galeri</a>
+                    <a href="tentang-kami.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Tentang Kami</a>
+                    <a href="member.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Member</a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-emerald-700 flex flex-col gap-2">
+                <a href="index.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Beranda</a>
+                <a href="layanan.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Layanan</a>
+                <a href="dokter.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Dokter</a>
+                <a href="pendaftaran.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Pendaftaran</a>
+                <a href="kontak.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Kontak</a>
+                <a href="galeri.html" class="text-white bg-emerald-700 px-3 py-2 rounded transition font-semibold">Galeri</a>
+                <a href="tentang-kami.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Tentang Kami</a>
+                <a href="member.html" class="text-white hover:bg-emerald-700 px-3 py-2 rounded transition font-medium">Member</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Galeri</h1>
+            <p class="text-xl text-emerald-100">Lihat fasilitas dan kegiatan Puskesmas Sehat</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+        <!-- Fasilitas -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-emerald-700 mb-12">Fasilitas Kami</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="../images/ruang-pemeriksaan-umum.png" class="w-full h-48 object-cover" alt="Ruang Pemeriksaan Umum">
+                    <p class="text-center text-emerald-800 font-semibold py-3">Ruang Pemeriksaan Umum</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="../images/labolatorium.png" class="w-full h-48 object-cover" alt="Ruang Laboratorium">
+                    <p class="text-center text-emerald-800 font-semibold py-3">Ruang Laboratorium</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="../images/ruang-gigi.png" class="w-full h-48 object-cover" alt="Ruang Gigi">
+                    <p class="text-center text-emerald-800 font-semibold py-3">Ruang Gigi</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="../images/apotek.jpg" class="w-full h-48 object-cover" alt="Apotek">
+                    <p class="text-center text-emerald-800 font-semibold py-3">Apotek</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="../images/ruang-istirahat.jpg" class="w-full h-48 object-cover" alt="Ruang Istirahat">
+                    <p class="text-center text-emerald-800 font-semibold py-3">Ruang Istirahat</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="../images/ruang-konsultasi.jpg" class="w-full h-48 object-cover" alt="Ruang Konsultasi">
+                    <p class="text-center text-emerald-800 font-semibold py-3">Ruang Konsultasi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kegiatan -->
+        <section>
+            <h2 class="text-4xl font-bold text-emerald-700 mb-12">Kegiatan Kami</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition cursor-pointer">
+                        <i class="fas fa-users text-emerald-600 text-5xl"></i>
+                    </div>
+                    <p class="text-center text-gray-700 font-semibold mt-4">Penyuluhan Kesehatan</p>
+                </div>
+
+                <div>
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition cursor-pointer">
+                        <i class="fas fa-heartbeat text-emerald-600 text-5xl"></i>
+                    </div>
+                    <p class="text-center text-gray-700 font-semibold mt-4">Program Vaksinasi</p>
+                </div>
+
+                <div>
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition cursor-pointer">
+                        <i class="fas fa-heart text-emerald-600 text-5xl"></i>
+                    </div>
+                    <p class="text-center text-gray-700 font-semibold mt-4">Donor Darah</p>
+                </div>
+
+                <div>
+                    <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center hover:shadow-lg hover:-translate-y-2 transition cursor-pointer">
+                        <i class="fas fa-dumbbell text-emerald-600 text-5xl"></i>
+                    </div>
+                    <p class="text-center text-gray-700 font-semibold mt-4">Senam Kesehatan</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white text-center py-8 border-t-4 border-emerald-600 mt-16">
+        <div class="container mx-auto px-4">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+</body>
+</html>
