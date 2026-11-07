@@ -1,4 +1,4 @@
-# Repositori Laporan Praktikum
+# Repositori Laporan Praktikum dan Tugas Teori
 
 
 ```
