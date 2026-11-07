@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Selector DOM</title>
+</head>
+<body>
+<h1 id="judul">Daftar Mahasiswa</h1>
+<ul id="list">
+<li class="item">Andi</li>
+<li class="item">Bunga</li>
+<li class="item">Cakra</li>
+</ul>
+
+<p id="pesan">teks blablabala</p>
+<div id="kotak"></div>
+
+<form>
+  <label for="nama" id="nama">nama</label>
+  <input type="text" id="inputname">
+
+  <label for="kelas" id="kelas">kelas</label>
+  <input type="text" id="inputkelas">
+  <button>submit</button>
+
+  <ul id="inputname">
+
+  </ul>
+
+
+  <script>
+    const form = document.querySelector("form");
+    const inputName = document.getElementById("inputname");
+    const inputKelas = document.getElementById("inputkelas");
+
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nama = inputName.value;
+      const kelas = inputKelas.value;
+
+      const isiList = document.getElementById("list").innerHTML;
+      document.getElementById("list").innerHTML = isiList + `<il class="item">${nama}</li>`;
+
+      const isiListKelas = document.getElementById("list").innerHTML;
+      document.getElementById("list").innerHTML = isiListKelas + `<il class="item">${kelas}</li>`;
+
+
+    });
+  </script>
+</form>
+</body>
+</html>
