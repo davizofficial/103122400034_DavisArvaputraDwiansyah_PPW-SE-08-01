@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Pengaduan - Puskesmas Purwokerto</title>
+</head>
+<body>
+    <!-- Header Utama -->
+    <header>
+        <h1>Puskesmas Purwokerto</h1>
+        <p>Pusat Kesehatan Masyarakat Terpadu - Melayani dengan Sepenuh Hati dan Profesional</p>
+        <nav aria-label="Menu Navigasi Utama">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="dokter.html">Dokter</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="member.html">Member</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+        <section>
+            <h2>Informasi Kontak dan Lokasi Pelayanan</h2>
+            <p>
+                Kami menyambut segala bentuk komunikasi, masukan, dan pertanyaan dari masyarakat. 
+                Puskesmas Purwokerto berkomitmen untuk memberikan transparansi informasi serta respons cepat 
+                terhadap kebutuhan layanan kesehatan Anda.
+            </p>
+        </section>
+
+        <!-- Data Kontak Langsung -->
+        <section>
+            <h2>Alamat Kantor dan Saluran Resmi</h2>
+            <address>
+                <p>
+                    <strong>Puskesmas Purwokerto</strong><br>
+                    Jl. Kesehatan No. 123, Kelurahan Purwokerto Wetan, Kecamatan Purwokerto Timur,<br>
+                    Kabupaten Banyumas, Provinsi Jawa Tengah, Kode Pos 53111.
+                </p>
+            </address>
+            <p>
+                <strong>Telepon Kantor / Informasi:</strong> (0281) 1234567<br>
+                <strong>Layanan WhatsApp Aduan Cepat:</strong> 0812-3456-7890<br>
+                <strong>Hotline Ambulans & UGD 24 Jam:</strong> (0281) 7654321<br>
+                <strong>Email Resmi:</strong> layanan@puskesmaspurwokerto.go.id<br>
+                <strong>Laman Web Resmi:</strong> puskesmaspurwokerto.go.id
+            </p>
+        </section>
+
+        <!-- Tabel Narahubung Unit (Data Tabular) -->
+        <section>
+            <h2>Daftar Saluran Narahubung Setiap Unit</h2>
+            <p>Silakan hubungi kontak unit yang relevan dengan kebutuhan Anda:</p>
+
+            <table border="1">
+                <caption>Daftar Kontak Unit Layanan Puskesmas Purwokerto</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Nama Unit / Divisi</th>
+                        <th scope="col">Saluran Komunikasi</th>
+                        <th scope="col">Nomor / Alamat Kontak</th>
+                        <th scope="col">Waktu Respons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Unit Gawat Darurat (UGD)</td>
+                        <td>Panggilan Darurat / Telepon Langsung</td>
+                        <td>(0281) 7654321</td>
+                        <td>Segera (Siaga 24 Jam)</td>
+                    </tr>
+                    <tr>
+                        <td>Loket Pendaftaran & Antrean</td>
+                        <td>WhatsApp Chat</td>
+                        <td>0812-3456-7891</td>
+                        <td>07:30 - 14:00 WIB</td>
+                    </tr>
+                    <tr>
+                        <td>Layanan Konseling Gizi & KIA</td>
+                        <td>Telepon / Konsultasi Poli</td>
+                        <td>(0281) 1234567 Ext. 102</td>
+                        <td>08:00 - 13:00 WIB</td>
+                    </tr>
+                    <tr>
+                        <td>Bagian Humas & Pengaduan</td>
+                        <td>Email & Formulir Pengaduan</td>
+                        <td>pengaduan@puskesmaspurwokerto.go.id</td>
+                        <td>1x24 Jam Kerja</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulir Kirim Pesan / Pengaduan -->
+        <section>
+            <h2>Formulir Aspirasi, Saran, dan Pengaduan Masyarakat</h2>
+            <p>Sampaikan pertanyaan atau laporan pelayanan Anda melalui formulir di bawah ini:</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend><strong>Kirim Pesan atau Masukan Pelayanan</strong></legend>
+                    <p>
+                        <label for="nama_pengirim">Nama Lengkap Pengirim *:</label><br>
+                        <input type="text" id="nama_pengirim" name="nama_pengirim" placeholder="Masukkan nama Anda" required>
+                    </p>
+
+                    <p>
+                        <label for="email_pengirim">Alamat Email Aktif *:</label><br>
+                        <input type="email" id="email_pengirim" name="email_pengirim" placeholder="nama@email.com" required>
+                    </p>
+
+                    <p>
+                        <label for="telepon_pengirim">Nomor Telepon / WhatsApp *:</label><br>
+                        <input type="tel" id="telepon_pengirim" name="telepon_pengirim" placeholder="08xxxxxxxxxx" required>
+                    </p>
+
+                    <p>
+                        <label for="kategori_pesan">Kategori Pesan / Aduan *:</label><br>
+                        <select id="kategori_pesan" name="kategori_pesan" required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Pertanyaan Informasi Layanan">Pertanyaan Informasi Layanan</option>
+                            <option value="Saran & Apresiasi">Saran & Apresiasi Pelayanan</option>
+                            <option value="Keluhan / Pengaduan Layanan">Keluhan / Pengaduan Layanan</option>
+                            <option value="Permohonan Kerjasama & Edukasi">Permohonan Kerjasama & Edukasi</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="subjek_pesan">Subjek / Judul Pesan *:</label><br>
+                        <input type="text" id="subjek_pesan" name="subjek_pesan" placeholder="Ringkasan inti pesan" required>
+                    </p>
+
+                    <p>
+                        <label for="isi_pesan">Isi Pesan / Uraian Masukan *:</label><br>
+                        <textarea id="isi_pesan" name="isi_pesan" rows="5" cols="50" placeholder="Tuliskan secara jelas dan detail..." required></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Kirim Pesan Sekarang</button>
+                        &nbsp;&nbsp;
+                        <button type="reset">Batal / Reset</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Petunjuk Transportasi -->
+        <section>
+            <h2>Petunjuk Rute & Akses Angkutan Umum</h2>
+            <ul>
+                <li><strong>Angkutan Kota (Angkot):</strong> Naik angkot jalur C1 atau C2 dan turun tepat di depan halte Puskesmas Purwokerto Timur.</li>
+                <li><strong>Kereta Api (Stasiun Purwokerto):</strong> Jarak sekitar 3,5 kilometer ke arah timur melintasi Jl. Jenderal Soedirman.</li>
+                <li><strong>Patokan Lokasi:</strong> Berjarak 200 meter sebelah barat Kantor Kecamatan Purwokerto Timur.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p><strong>Puskesmas Purwokerto</strong> - Melayani dengan Sepenuh Hati</p>
+        <p>&copy; 2026 Puskesmas Purwokerto. Seluruh hak cipta dilindungi undang-undang.</p>
+    </footer>
+</body>
+</html>
