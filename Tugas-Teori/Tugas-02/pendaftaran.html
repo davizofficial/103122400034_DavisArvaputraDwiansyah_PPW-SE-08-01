@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Pasien - Puskesmas Purwokerto</title>
+</head>
+<body>
+    <!-- Header Utama -->
+    <header>
+        <h1>Puskesmas Purwokerto</h1>
+        <p>Pusat Kesehatan Masyarakat Terpadu - Melayani dengan Sepenuh Hati dan Profesional</p>
+        <nav aria-label="Menu Navigasi Utama">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="dokter.html">Dokter</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="member.html">Member</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+        <section>
+            <h2>Formulir Pendaftaran Pasien Baru dan Reservasi Antrean Rawat Jalan</h2>
+            <p>
+                Silakan lengkapi formulir di bawah ini dengan data yang sesuai pada kartu tanda pengenal (KTP/KK). 
+                Pendaftaran daring ini berlaku untuk pasien baru maupun pasien lama yang ingin melakukan 
+                booking antrean periksa di Puskesmas Purwokerto.
+            </p>
+            <p><em>Tanda bintang (<span aria-hidden="true">*</span>) menandakan kolom wajib diisi.</em></p>
+        </section>
+
+        <section>
+            <form action="#" method="post">
+                <!-- Fieldset 1: Data Identitas Pribadi -->
+                <fieldset>
+                    <legend><strong>1. Data Identitas Pribadi Pasien</strong></legend>
+                    <p>
+                        <label for="nama_lengkap">Nama Lengkap Pasien *:</label><br>
+                        <input type="text" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan nama lengkap sesuai KTP" required>
+                    </p>
+
+                    <p>
+                        <label for="nik">Nomor Induk Kependudukan (NIK 16 Digit) *:</label><br>
+                        <input type="text" id="nik" name="nik" maxlength="16" pattern="[0-9]{16}" placeholder="Contoh: 3302xxxxxxxxxxxx" required>
+                    </p>
+
+                    <p>
+                        Jenis Kelamin *: <br>
+                        <input type="radio" id="jk_laki" name="jenis_kelamin" value="Laki-laki" required>
+                        <label for="jk_laki">Laki-laki</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="jk_perempuan" name="jenis_kelamin" value="Perempuan">
+                        <label for="jk_perempuan">Perempuan</label>
+                    </p>
+
+                    <p>
+                        <label for="tempat_lahir">Tempat Lahir *:</label><br>
+                        <input type="text" id="tempat_lahir" name="tempat_lahir" placeholder="Kota/Kabupaten kelahiran" required>
+                    </p>
+
+                    <p>
+                        <label for="tanggal_lahir">Tanggal Lahir *:</label><br>
+                        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                    </p>
+
+                    <p>
+                        <label for="golongan_darah">Golongan Darah:</label><br>
+                        <select id="golongan_darah" name="golongan_darah">
+                            <option value="">-- Pilih Golongan Darah --</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="O">O</option>
+                            <option value="Tidak Tahu">Belum Diketahui</option>
+                        </select>
+                    </p>
+                </fieldset>
+                <br>
+
+                <!-- Fieldset 2: Kontak dan Alamat Domisili -->
+                <fieldset>
+                    <legend><strong>2. Alamat Domisili dan Kontak Pasien</strong></legend>
+                    <p>
+                        <label for="alamat_domisili">Alamat Tempat Tinggal Lengkap *:</label><br>
+                        <textarea id="alamat_domisili" name="alamat_domisili" rows="3" cols="50" placeholder="Tuliskan nama jalan, RT/RW, nomor rumah" required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="kelurahan_desa">Kelurahan / Desa *:</label><br>
+                        <input type="text" id="kelurahan_desa" name="kelurahan_desa" placeholder="Contoh: Purwokerto Wetan" required>
+                    </p>
+
+                    <p>
+                        <label for="kecamatan">Kecamatan *:</label><br>
+                        <input type="text" id="kecamatan" name="kecamatan" placeholder="Contoh: Purwokerto Timur" required>
+                    </p>
+
+                    <p>
+                        <label for="nomor_telepon">Nomor Telepon / WhatsApp Aktif *:</label><br>
+                        <input type="tel" id="nomor_telepon" name="nomor_telepon" placeholder="Contoh: 081234567890" required>
+                    </p>
+
+                    <p>
+                        <label for="alamat_email">Alamat Email (Opsional):</label><br>
+                        <input type="email" id="alamat_email" name="alamat_email" placeholder="nama@domain.com">
+                    </p>
+                </fieldset>
+                <br>
+
+                <!-- Fieldset 3: Rincian Kunjungan & Penjaminan -->
+                <fieldset>
+                    <legend><strong>3. Rincian Kunjungan dan Penjaminan Biaya</strong></legend>
+                    <p>
+                        <label for="poli_tujuan">Pilih Poli / Unit Pelayanan Tujuan *:</label><br>
+                        <select id="poli_tujuan" name="poli_tujuan" required>
+                            <option value="">-- Pilih Poli Tujuan --</option>
+                            <option value="Poli Umum">Poli Pemeriksaan Umum</option>
+                            <option value="Poli Gigi">Poli Kesehatan Gigi dan Mulut</option>
+                            <option value="Poli KIA">Poli Kesehatan Ibu dan Anak (KIA) & KB</option>
+                            <option value="Laboratorium">Laboratorium Medis</option>
+                            <option value="Konsultasi Gizi">Konsultasi Gizi & Sanitasi</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="tanggal_kunjungan">Rencana Tanggal Kunjungan *:</label><br>
+                        <input type="date" id="tanggal_kunjungan" name="tanggal_kunjungan" required>
+                    </p>
+
+                    <p>
+                        <label for="sesi_layanan">Pilihan Sesi Pelayanan *:</label><br>
+                        <select id="sesi_layanan" name="sesi_layanan" required>
+                            <option value="">-- Pilih Sesi Waktu --</option>
+                            <option value="Sesi Pagi (08:00 - 10:30 WIB)">Sesi Pagi (08:00 - 10:30 WIB)</option>
+                            <option value="Sesi Siang (10:30 - 13:00 WIB)">Sesi Siang (10:30 - 13:00 WIB)</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        Kategori Penjaminan Pembayaran *: <br>
+                        <input type="radio" id="jaminan_bpjs" name="penjaminan" value="BPJS Kesehatan" required>
+                        <label for="jaminan_bpjs">BPJS Kesehatan / KIS</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="jaminan_umum" name="penjaminan" value="Pasien Umum Mandiri">
+                        <label for="jaminan_umum">Pasien Umum (Biaya Mandiri)</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="jaminan_asuransi_lain" name="penjaminan" value="Asuransi Swasta">
+                        <label for="jaminan_asuransi_lain">Asuransi Swasta Rekanan</label>
+                    </p>
+
+                    <p>
+                        <label for="nomor_kartu_asuransi">Nomor Kartu BPJS / Asuransi (Wajib bila memilih BPJS):</label><br>
+                        <input type="text" id="nomor_kartu_asuransi" name="nomor_kartu_asuransi" placeholder="13 Digit Nomor BPJS">
+                    </p>
+
+                    <p>
+                        <label for="unggah_ktp">Unggah Foto Kartu Identitas (KTP/KK) (Maks 2MB):</label><br>
+                        <input type="file" id="unggah_ktp" name="unggah_ktp" accept=".jpg,.jpeg,.png,.pdf">
+                    </p>
+
+                    <p>
+                        <label for="keluhan_utama">Keluhan Utama / Gejala Sakit yang Dirasakan *:</label><br>
+                        <textarea id="keluhan_utama" name="keluhan_utama" rows="4" cols="50" placeholder="Tuliskan keluhan yang dirasakan, sejak kapan keluhan muncul, serta riwayat alergi obat jika ada" required></textarea>
+                    </p>
+                </fieldset>
+                <br>
+
+                <!-- Fieldset 4: Persetujuan Pasien -->
+                <fieldset>
+                    <legend><strong>4. Pernyataan Persetujuan Pasien</strong></legend>
+                    <p>
+                        <input type="checkbox" id="persetujuan_syarat" name="persetujuan_syarat" required>
+                        <label for="persetujuan_syarat">
+                            Saya menyatakan bahwa data yang saya isikan pada formulir pendaftaran ini adalah benar, sah, dan sesuai dengan identitas kependudukan saya. Saya bersedia mematuhi tata tertib dan protokol pelayanan di Puskesmas Purwokerto.
+                        </label>
+                    </p>
+                </fieldset>
+                <br>
+
+                <!-- Tombol Aksi -->
+                <p>
+                    <button type="submit">Kirim Pendaftaran & Dapatkan Nomor Antrean</button>
+                    &nbsp;&nbsp;
+                    <button type="reset">Bersihkan Formulir</button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Petunjuk Pasca Pendaftaran -->
+        <section>
+            <h2>Informasi Penting Setelah Mengisi Formulir</h2>
+            <ol>
+                <li>Petugas pendaftaran akan memvalidasi data Anda dalam waktu 1x24 jam kerja sebelum jadwal kunjungan.</li>
+                <li>Konfirmasi pendaftaran dan nomor kode antrean barcode akan dikirimkan melalui pesan WhatsApp atau SMS ke nomor yang Anda daftarkan.</li>
+                <li>Pada hari kunjungan, harap membawa kartu identitas asli (KTP/KIA) dan kartu BPJS asli untuk verifikasi akhir di loket antrean daring.</li>
+            </ol>
+            <p>
+                Mengalami kesulitan saat pengisian? Hubungi pusat layanan bantuan kami di halaman 
+                <a href="kontak.html">Kontak Informasi</a>.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p><strong>Puskesmas Purwokerto</strong> - Melayani dengan Sepenuh Hati</p>
+        <p>&copy; 2026 Puskesmas Purwokerto. Seluruh hak cipta dilindungi undang-undang.</p>
+    </footer>
+</body>
+</html>
