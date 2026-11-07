@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Dokter - Puskesmas Sehat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-emerald-800 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white font-bold text-lg flex items-center">
+                    <i class="fas fa-hospital mr-2"></i> Puskesmas Sehat
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="text-white md:hidden text-2xl focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-6">
+                    <a href="index.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Beranda</a>
+                    <a href="layanan.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Layanan</a>
+                    <a href="dokter.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition bg-emerald-700">Dokter</a>
+                    <a href="pendaftaran.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Pendaftaran</a>
+                    <a href="kontak.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Kontak</a>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-emerald-700 mt-3 flex flex-col gap-2">
+                <a href="index.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Beranda</a>
+                <a href="layanan.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Layanan</a>
+                <a href="dokter.html" class="text-white bg-emerald-700 px-4 py-2 rounded transition">Dokter</a>
+                <a href="pendaftaran.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Pendaftaran</a>
+                <a href="kontak.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Kontak</a>
+                <a href="galeri.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Galeri</a>
+                <a href="tentang-kami.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Tentang Kami</a>
+                <a href="member.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Member</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Tim Dokter Kami</h1>
+            <p class="text-xl text-emerald-100">Dokter berpengalaman dan bersertifikat siap melayani Anda</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+        <section>
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <h2 class="text-4xl font-bold text-emerald-700">Dokter Spesialis</h2>
+                        <span id="badgeTotalDokter" class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full">Memuat dokter...</span>
+                    </div>
+                    <p class="text-gray-600 mt-1">Temukan dokter sesuai kebutuhan medis Anda</p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <!-- Dropdown Sortir -->
+                    <select id="sortDokter" class="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 bg-white focus:outline-none focus:border-emerald-600 shadow-sm cursor-pointer">
+                        <option value="default">Urutkan: Default</option>
+                        <option value="nama-asc">Nama (A - Z)</option>
+                        <option value="nama-desc">Nama (Z - A)</option>
+                        <option value="pengalaman-desc">Pengalaman Terlama</option>
+                    </select>
+
+                    <!-- Live Search Box -->
+                    <div class="relative w-full sm:w-72">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-emerald-600">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" id="cariDokter" placeholder="Cari nama atau spesialis..." 
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-emerald-600 shadow-sm text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2 mb-8">
+                <button class="filter-dokter-btn bg-emerald-600 text-white px-4 py-1.5 rounded-full text-sm font-medium transition cursor-pointer" data-kategori="semua">Semua</button>
+                <button class="filter-dokter-btn bg-emerald-100 text-emerald-800 hover:bg-emerald-200 px-4 py-1.5 rounded-full text-sm font-medium transition cursor-pointer" data-kategori="umum">Dokter Umum</button>
+                <button class="filter-dokter-btn bg-emerald-100 text-emerald-800 hover:bg-emerald-200 px-4 py-1.5 rounded-full text-sm font-medium transition cursor-pointer" data-kategori="anak">Dokter Anak</button>
+                <button class="filter-dokter-btn bg-emerald-100 text-emerald-800 hover:bg-emerald-200 px-4 py-1.5 rounded-full text-sm font-medium transition cursor-pointer" data-kategori="gigi">Dokter Gigi</button>
+                <button class="filter-dokter-btn bg-emerald-100 text-emerald-800 hover:bg-emerald-200 px-4 py-1.5 rounded-full text-sm font-medium transition cursor-pointer" data-kategori="kandungan">Dokter Kandungan</button>
+                <button class="filter-dokter-btn bg-emerald-100 text-emerald-800 hover:bg-emerald-200 px-4 py-1.5 rounded-full text-sm font-medium transition cursor-pointer" data-kategori="penyakit-dalam">Penyakit Dalam</button>
+            </div>
+            
+            <!-- Dynamic Doctor Cards Container (Di-render dari Array JavaScript) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="daftarDokter">
+                <!-- Data dokter diisi secara dinamis melalui script.js -->
+            </div>
+
+            <!-- Pesan jika dokter tidak ditemukan -->
+            <div id="pesanDokterKosong" class="hidden text-center py-12 bg-white rounded-lg shadow-sm border mt-6">
+                <i class="fas fa-user-slash text-gray-400 text-5xl mb-3"></i>
+                <p class="text-gray-600 font-medium">Dokter atau spesialisasi yang Anda cari tidak ditemukan.</p>
+                <button class="mt-4 text-emerald-600 hover:text-emerald-700 font-semibold text-sm cursor-pointer" onclick="$('#cariDokter').val('').trigger('keyup');">
+                    Reset Pencarian
+                </button>
+            </div>
+        </section>
+
+        <!-- Dynamic Doctor Schedule Section (Data Table Di-render dari Array JavaScript) -->
+        <section class="mt-16">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold text-emerald-800 flex items-center">
+                        <i class="fas fa-calendar-alt text-emerald-600 mr-3"></i> Jadwal Pelayanan Dokter (Dynamic Data)
+                    </h2>
+                    <p class="text-gray-600 text-sm mt-1">Jadwal resmi praktik dokter Puskesmas Purwokerto yang di-render secara dinamis via JavaScript.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-emerald-800 text-white text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-semibold">Nama Dokter</th>
+                                <th class="py-4 px-6 font-semibold">Poli / Unit</th>
+                                <th class="py-4 px-6 font-semibold">Hari Pelayanan</th>
+                                <th class="py-4 px-6 font-semibold">Waktu Praktik</th>
+                                <th class="py-4 px-6 font-semibold">Ruang Praktik</th>
+                                <th class="py-4 px-6 font-semibold">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyJadwalDokter" class="divide-y divide-gray-200 text-sm">
+                            <!-- Diisi secara dinamis oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white text-center py-8 border-t-4 border-emerald-600 mt-16">
+        <div class="container mx-auto px-4">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom JavaScript & jQuery -->
+    <script src="js/script.js"></script>
+</body>
+</html>
