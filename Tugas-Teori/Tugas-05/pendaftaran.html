@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran - Puskesmas Sehat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-emerald-800 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white font-bold text-lg flex items-center">
+                    <i class="fas fa-hospital mr-2"></i> Puskesmas Sehat
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="text-white md:hidden text-2xl focus:outline-none" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-6">
+                    <a href="index.html"
+                        class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Beranda</a>
+                    <a href="layanan.html"
+                        class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Layanan</a>
+                    <a href="dokter.html"
+                        class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Dokter</a>
+                    <a href="pendaftaran.html"
+                        class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition bg-emerald-700">Pendaftaran</a>
+                    <a href="kontak.html"
+                        class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Kontak</a>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-emerald-700 mt-3 flex flex-col gap-2">
+                <a href="index.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Beranda</a>
+                <a href="layanan.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Layanan</a>
+                <a href="dokter.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Dokter</a>
+                <a href="pendaftaran.html" class="text-white bg-emerald-700 px-4 py-2 rounded transition">Pendaftaran</a>
+                <a href="kontak.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Kontak</a>
+                <a href="galeri.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Galeri</a>
+                <a href="tentang-kami.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Tentang Kami</a>
+                <a href="member.html" class="text-white hover:bg-emerald-700 px-4 py-2 rounded transition">Member</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Pendaftaran Pasien</h1>
+            <p class="text-xl text-emerald-100">Daftar menjadi pasien baru dengan mudah dan cepat</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+        <section>
+            <h2 class="text-4xl font-bold text-emerald-700 mb-12">Formulir Pendaftaran</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Form -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <form id="formPendaftaran">
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Nama Lengkap</label>
+                                <input type="text" id="pendaftaranNama" placeholder="Masukkan nama lengkap"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Nomor Identitas
+                                    (NIK/Paspor)</label>
+                                <input type="text" id="pendaftaranNik" placeholder="Masukkan nomor identitas 16 digit"
+                                    maxlength="16"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="pendaftaranEmail" placeholder="Masukkan email"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Nomor Telepon</label>
+                                <input type="tel" id="pendaftaranTelp" placeholder="Masukkan nomor telepon (contoh: 08123456789)"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Alamat Lengkap</label>
+                                <textarea id="pendaftaranAlamat" rows="3" placeholder="Masukkan alamat lengkap"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required></textarea>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Jenis Kelamin</label>
+                                <select id="pendaftaranGender"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                                    <option value="">Pilih Jenis Kelamin</option>
+                                    <option value="laki-laki">Laki-laki</option>
+                                    <option value="perempuan">Perempuan</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-emerald-700 font-semibold mb-2">Tanggal Lahir</label>
+                                <input type="date" id="pendaftaranTanggal"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-emerald-700 font-semibold mb-2">Pilih Layanan</label>
+                                <select id="pendaftaranLayanan"
+                                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-600"
+                                    required>
+                                    <option value="">Pilih Layanan</option>
+                                    <option value="pemeriksaan">Pemeriksaan Umum</option>
+                                    <option value="imunisasi">Imunisasi</option>
+                                    <option value="laboratorium">Laboratorium</option>
+                                    <option value="gigi">Gigi & Mulut</option>
+                                </select>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition">Daftar
+                                Sekarang</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Guide -->
+                <div class="bg-green-50 border-l-4 border-emerald-600 rounded-lg p-6">
+                    <h3 class="font-bold text-emerald-700 mb-4">Panduan Pendaftaran</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-600 font-bold text-lg flex-shrink-0"><i
+                                    class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Isi semua data dengan benar</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-600 font-bold text-lg flex-shrink-0"><i
+                                    class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Siapkan dokumen identitas (NIK 16 digit)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-600 font-bold text-lg flex-shrink-0"><i
+                                    class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Pilih poli layanan kesehatan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-600 font-bold text-lg flex-shrink-0"><i
+                                    class="fas fa-check-circle"></i></span>
+                            <span class="text-gray-700">Nomor antrean langsung terbit otomatis</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Queue Section (Daftar Antrean Pasien Hari Ini - Dynamic JavaScript Table) -->
+        <section class="mt-16" id="antreanSection">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold text-emerald-800 flex items-center">
+                        <i class="fas fa-clipboard-list text-emerald-600 mr-3"></i> Antrean Pasien Hari Ini (Live Queue)
+                    </h2>
+                    <p class="text-gray-600 text-sm mt-1">Data antrean pasien dinamis yang diperbarui secara langsung saat formulir disubmit.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-sm text-gray-600 font-medium">Total Antrean Aktif:</span>
+                    <span id="badgeTotalAntrean" class="bg-emerald-600 text-white font-bold text-sm px-3.5 py-1 rounded-full shadow-sm">0 Pasien</span>
+                </div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-emerald-800 text-white text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-semibold">No. Antrean</th>
+                                <th class="py-4 px-6 font-semibold">Nama Pasien</th>
+                                <th class="py-4 px-6 font-semibold">Poli Rujukan</th>
+                                <th class="py-4 px-6 font-semibold">Jam Daftar</th>
+                                <th class="py-4 px-6 font-semibold">Status</th>
+                                <th class="py-4 px-6 font-semibold text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyAntreanPasien" class="divide-y divide-gray-200 text-sm">
+                            <!-- Diisi secara dinamis oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="pesanAntreanKosong" class="hidden text-center py-10 bg-white rounded-xl shadow-sm border mt-4">
+                <i class="fas fa-inbox text-gray-400 text-4xl mb-2"></i>
+                <p class="text-gray-500 font-medium">Belum ada antrean pasien untuk hari ini.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white text-center py-8 border-t-4 border-emerald-600 mt-16">
+        <div class="container mx-auto px-4">
+            <p class="mb-2"><strong>Copyright 2026 Puskesmas Sehat. Semua Hak Dilindungi.</strong></p>
+            <p>Kepercayaan Anda adalah Prioritas Kami</p>
+        </div>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom JavaScript & jQuery -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
